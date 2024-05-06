@@ -7,7 +7,7 @@
 
 from linux_story.common import tq_file_system
 from kano_profile.apps import get_app_xp_for_challenge, load_app_state_variable, save_app_state_variable
-from kano_profile.badges import save_app_state_variable_with_dialog
+# from kano_profile.badges import save_app_state_variable_with_dialog
 from linux_story.file_creation.FileTree import FileTree
 from linux_story.launch_functions import get_step_class
 from linux_story.story.trees.default_trees import tree
@@ -47,8 +47,8 @@ class ChallengeController:
     def __save_challenge(new_challenge, challenge):
         if new_challenge > challenge or not new_challenge:
             level = load_app_state_variable("linux-story", "level")
-            if challenge > level:
-                save_app_state_variable_with_dialog("linux-story", "level", challenge)
+            # if challenge > level:
+            #    save_app_state_variable_with_dialog("linux-story", "level", challenge)
 
     def __send_start_challenge_data(self, step_instance, terminal_commands, challenge_number):
         self.__message_client.send_start_challenge_data(

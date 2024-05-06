@@ -6,9 +6,9 @@
 import os
 import time
 from gi.repository import Gtk, Gdk, Pango, GObject
-from kano.gtk3.apply_styles import apply_styling_to_screen
-from kano_profile.apps import load_app_state_variable
-from kano.gtk3.scrolled_window import ScrolledWindow
+from linux_story.kano.gtk3.apply_styles import apply_styling_to_screen
+from ..kano_profile.apps import load_app_state_variable
+from ..kano.gtk3.scrolled_window import ScrolledWindow
 
 from linux_story.file_creation.FileTree import revert_to_default_permissions
 from linux_story.gtk3.TerminalUi import TerminalUi
