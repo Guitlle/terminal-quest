@@ -164,6 +164,9 @@ class Storybook(Gtk.TextView):
 
         for tag_name in tag_names:
             tag = self.__get_tag(tag_name)
+            if tag is None:
+                print("DEBUG: tag is None. tag_name = ", tag_name)
+                continue
             textbuffer.apply_tag(tag, end_but_one_iter, end_iter)
 
     def print_challenge_title(self, challenge_number="1"):

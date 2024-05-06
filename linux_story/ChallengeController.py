@@ -47,8 +47,8 @@ class ChallengeController:
     def __save_challenge(new_challenge, challenge):
         if new_challenge > challenge or not new_challenge:
             level = load_app_state_variable("linux-story", "level")
-            # if challenge > level:
-            #    save_app_state_variable_with_dialog("linux-story", "level", challenge)
+            if challenge > level:
+                save_app_state_variable("linux-story", "level", challenge)
 
     def __send_start_challenge_data(self, step_instance, terminal_commands, challenge_number):
         self.__message_client.send_start_challenge_data(

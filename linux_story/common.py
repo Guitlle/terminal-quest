@@ -53,17 +53,7 @@ def get_max_challenge_number():
         str: string of the maximum challenge number as saved in
             kano-profile.
     '''
-
-    # Hardcoded path, perhaps change it later
-    path = "/usr/share/kano-profile/rules/app_profiles.json"
-    f = open(path)
-    str_data = f.read()
-    f.close()
-
-    dict_data = json.loads(str_data)
-    max_level = dict_data['linux-story']['max-level']
-
-    return max_level
+    return 46
 
 
 def get_username():

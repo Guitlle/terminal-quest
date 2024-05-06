@@ -1,6 +1,7 @@
 class Logger:
     def debug(self, message):
-        print("DEBUG", message)
+        # print("DEBUG", message)
+        pass
 
     def error(self, message):
         print("ERROR", message)
