@@ -118,9 +118,9 @@ class MainWindow(Gtk.Window):
         screen = Gdk.Screen.get_default()
 
         self.__spellbook = Spellbook(is_caps_lock_on=self.__is_caps_lock_on)
-
-        width = screen.get_width()
-        height = screen.get_height()
+        wwidth, wheight = self.get_size()
+        width = wwidth
+        height = wheight
         terminal_width, terminal_height = width / 2 - 20, height - self.__spellbook.HEIGHT - 2 * 44 - 20
         story_width, story_height = width / 2 - 20, height - self.__spellbook.HEIGHT - 2 * 44 - 10
         self.__terminal = TerminalUi(terminal_width, terminal_height)

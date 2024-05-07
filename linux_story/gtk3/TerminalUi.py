@@ -33,7 +33,9 @@ class TerminalUi(Vte.Terminal):
 
         # This prevents the user scrolling back through the history
         # self.set_scrollback_lines(0)
-        self.set_size(width, height)
+        columns = width // self.get_char_width()
+        rows = height // self.get_char_height()
+        self.set_size(columns, rows)
         self.__setup_appearance()
 
     def __setup_appearance(self):
